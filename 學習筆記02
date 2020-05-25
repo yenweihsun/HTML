@@ -66,15 +66,49 @@ p.error {
 ..
 <p class="error">I am different</p>
 -------------------------------------------------------
+html Links  
+基本格式:
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+-------------------------------------------------------
+網頁顯示變化:
+target=??
+1."_blank"  => 另開新視窗
+<a href="https://www.w3schools.com/" target="_blank">
+2."_top"    => 目前所看的頁面直接變網頁
+<a href="https://www.w3schools.com/html/" target="_top">
+-------------------------------------------------------
+用圖案做連結:
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0">
+</a>
+-------------------------------------------------------
+用按鈕做連結:
+<button onclick="document.location = 'default.asp'">HTML Tutorial</button>
+用title 作為連結:
+<a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
 
+-------------------------------------------------------
+有設計感的button:
+<style>
+a:link, a:visited {
+  background-color: #f44336;   -- transparent 透明色
+  color: white;
+  padding: 15px 25px;       --邊框與字的距離
+  text-align: center;       --文字對齊
+  text-decoration: none;    --底線裝飾  --underline 有底線
+  display: inline-block;    --排列方式  --inline 無法設定高寬,上下外距    -- inline-block 可以設定高寬,上下外距
+}
 
+a:hover, a:active {
+  background-color: red;    --hover 當你滑鼠移到按鈕上時，顏色會變，方便提示。
+}
+</style>
+-----------------------------------------------------------------------------
+html 書籤  --點移下link 直接帶你到該去的位置
 
-
-
-
-
-
-
+<p><a href="#C10">Jump to Chapter 10</a></p>
+.......
+<h2 id="C10">Chapter 10</h2>
 
 
 
