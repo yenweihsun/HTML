@@ -1,0 +1,45 @@
+style兩種寫法:
+1.
+style="width:48px;height:48px;">
+2.
+<style>
+img {
+  width: 100%;
+}
+</style>
+------------------------------------------------------------------------------
+法二: style 優先度高 會蓋掉法一
+1.<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+2.<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+------------------------------------------------------------------------------
+src:
+<img src="/images/html5.gif"
+<img src="https://www.w3schools.com/images/w3schools_green.jpg"
+<img src="programming.gif"
+------------------------------------------------------------------------------
+float:  --right -- left  圖片可以擺在最左邊或是最右邊?
+<img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+------------------------------------------------------------------------------
+HTML Image Maps:  圖片中的連結:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
