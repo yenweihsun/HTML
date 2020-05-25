@@ -1,0 +1,43 @@
+基本架構:
+<!DOCTYPE html>    每個html文件上面都會寫
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+------------------------------------------------------------------
+html  links -> 放網址 
+<a href="https://www.w3xxxx">
+------------------------------------------------------------------
+html image -> 圖片 
+<img src="xxx.jpg" alt="xxx.com" width = "104"  height="142">
+(如果img無法顯現 alt可以幫助)
+------------------------------------------------------------------
+html button -> 按鈕
+<button>  click me!   </button>
+------------------------------------------------------------------
+html 表列選項: 
+
+<ul>                     --unordered html  無序
+    <li> coffee </li>
+    <li> tea    </li>
+    <li> milk   </li>
+</ul>
+
+<ol>                     --ordered html  有序
+    <li> coffee </li>
+    <li> tea    </li>
+    <li> milk   </li>
+</ol>
+------------------------------------------------------------------
+html empty 空白換行  <br>  --後面不用加上</br>
+ 
+<p> this is a <br> picture. </p>
+
+
