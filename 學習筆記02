@@ -1,0 +1,80 @@
+CSS => cascading style sheets
+3種方法把CSS加到 html <3種不同寫法>
+
+1. Inline   (內聯) --一般寫法
+2. Internal (內部) --先定義好style
+3. External (外部) --把外觀寫在xxx.css檔中,檔案內不能有html語法
+
+1.
+<h1 style="color:blue;">This is a Blue Heading</h1>
+
+2.
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+
+3.
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+--------------------------------------------------------
+styles.css 檔案內容只有寫:
+
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+-------------------------------------------------------
+css border 邊框:
+p {
+  border: 1px solid powderblue;
+}
+
+css padding 邊框與內文之間距離:
+p {
+  border: 1px solid powderblue;
+  padding: 30px;
+}
+
+css margin 邊框與邊框距離:
+p {
+  border: 1px solid powderblue;
+  margin: 50px;
+}
+-------------------------------------------------------
+#id attribute
+定義一個ID,給定ID樣式 ,呼叫它,就只有那一行吃樣式
+#p01 {
+  color: blue;
+}
+...
+...
+<p id="p01">I am different</p>
+-------------------------------------------------------
+class 屬性:
+p.error {
+  color: red;
+}
+...
+..
+<p class="error">I am different</p>
+-------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
