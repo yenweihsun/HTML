@@ -1,0 +1,82 @@
+HTML佈局元素  layout
+ ___________________________
+|           header          |
+|___________________________|
+|            nav            |
+|___________________________|
+|   section   |             |
+|_____________|    aside    |
+|   article   |             |
+|_____________|_____________|
+|           footer          |
+|___________________________|
+
+
+<header>-定義文檔或節的標題
+<nav>-定義用於導航鏈接的容器
+<section>-在文檔中定義一個部分
+<article>-定義獨立的獨立文章
+<aside>-定義除內容之外的內容（如邊欄）
+<footer>-為文檔或節定義頁腳
+<details>-定義其他細節
+<summary>-為<details>元素定義標題
+---------------------------------------------------------------------
+
+
+<img src="img_girl.jpg" style="width:100%;">                   width:100%      --超過原始大小的放大
+
+<img src="img_girl.jpg" style="max-width:100%;height:auto;">   max-width:100%  --有限度的放大,不能超過原始大小
+---------------------------------------------------------------------
+透過<picture> 可以設計 瀏覽器的寬度大小不同時,秀出不同圖片!!
+
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_smallflower.jpg" alt="Flowers">
+</picture>
+
+---------------------------------------------------------------------
+響應文字大小
+文本大小可以用“ vw”單位設置，即“視口寬度”。
+<h1 style="font-size:10vw">Hello World</h1>
+
+---------------------------------------------------------------------
+HTML <kbd>用於鍵盤輸入
+<kbd>標籤周圍的文本通常以等寬字體顯示：
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+---------------------------------------------------------------------
+HTML <samp>用於程序輸出
+HTML <samp>元素表示程序或計算系統的輸出。
+<samp>標籤周圍的文本通常以等寬字體顯示：
+<p>If you input wrong value, the program will return <samp>Error!</samp></p>
+
+---------------------------------------------------------------------
+HTML <var>用於變量
+HTML <var>元素定義了一個變量。  (((會變斜體字
+
+變量可以是數學表達式中的變量，也可以是編程上下文中的變量：
+Einstein wrote: <var>E</var> = <var>mc</var><sup>2</sup>.
+---------------------------------------------------------------------
+code 不吃換行和空格:
+
+<code>
+x = 5;<br>
+y = 6;<br>
+z = x + y;
+</code>
+---------------------------------------------------------------------
+HTML <figure>和<figcaption>元素
+字幕的目的是為圖像添加視覺說明。
+<figure>
+  <img src="pic_trulli.jpg" alt="Trulli">
+  <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+</figure>
+該<img>元素定義了圖像，該<figcaption> 元素定義了字幕。
+---------------------------------------------------------------------
+
+
+
+
+
