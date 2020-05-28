@@ -1,0 +1,132 @@
+Form 介紹:
+ 
+1.單行輸入:  input type="text"
+ <input type="text" id="fname" name="fname" value="John"><br>
+2.單選按鈕:  input type="radio"
+<input type="radio" id="male" name="gender" value="male">
+3.提交按鈕:  input type="submit"
+<input type="submit" value="Submit">
+4.動作:      form action="/action_page.php"   把填入的資訊送到另一個頁面
+<form action="/action_page.php" target="_blank">
+target="_blank"   -> 新開一頁
+        _self     -> 本頁視窗切換
+        _new      -> 會新開一頁,後續開的新視窗會覆蓋這新開的一頁。
+方法屬性
+該method屬性指定提交表單數據時要使用的HTTP方法（GET或 POST）。
+method = get / post;
+<form action="/action_page.php" method="post">
+--------------------------------------------------------------------------
+<select>元素
+該<select>元素定義了一個下拉列表：
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>             --該<option>元素定義了可以被選擇的選項。
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi" selected>Audi</option>      --多一個selected 表示預設選它
+</select>
+--------------------------------------
+可見值：
+使用size屬性指定可見值的數量：
+<select name="cars" size="3">                      --多一個size ="3" 表示一次秀3個選項給你看~~
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+--------------------------------------
+允許多項選擇：
+使用該multiple屬性允許用戶選擇多個值：
+<select name="cars" size="4" multiple>              -- multiple  表示可以多選
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+--------------------------------------
+所述<textarea>元件限定了多行輸入字段（文本區域）：
+<textarea name="message" rows="10" cols="30" style="width:200px; height:600px;">       --textarea  文字輸入的方框 
+The cat was playing in the garden.                                                     --也可設計方框大小
+</textarea>
+--------------------------------------
+<button>元素
+該<button>元素定義了一個可點擊的按鈕：
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+--------------------------------------
+<fieldset>和<legend>元素
+fieldset ->加上邊框 ,     <legend> -> 邊框上的字  
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+--------------------------------------
+<datalist>元素  
+用戶在輸入數據時將看到預定義選項的下拉列表。  
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+--------------------------------------
+
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">             --range  拉霸可以在範圍內左右拉  value = 中位數
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+--------------------------------------
+輸入類型密碼
+input type="password"        輸入密碼變->*****
+
+<form>
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd">
+</form>
+--------------------------------------
+輸入類型複位
+<input type="reset">定義一個重置按鈕 ，該按鈕會將所有表單值重置為其默認值：
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">                                                 --重設按鈕  ,可以恢復預設值
+</form>
+--------------------------------------
+輸入類型複選框
+<input type="checkbox">定義一個複選框。
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form>
+--------------------------------------
+輸入類型顏色
+將<input type="color">被用於應該包含顏色的輸入字段。
+
+
+
+
+
