@@ -21,25 +21,103 @@ float:  --right -- left  圖片可以擺在最左邊或是最右邊?
 <img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
 ------------------------------------------------------------------------------
 HTML Image Maps:  圖片中的連結:
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
 
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">       --34,44 左上座標  270,350右下座標
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">           --coords:定義框起來可連結的區域      
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">            --如果形狀是圓, 337,300 是圓心座標, 44是半徑
+</map>
+------------------------------------------------------------------------------
+Selector        | Example     |     Example description
+.class          | .intro      |     selects all elements with class="intro"  
+#id             | #firstname  |     selects the element with id = "firstname"    
+*               |    *        |     select all elements
+element         |    p        |     select all <p> elements
+element,element |   div,p     |     select all <div> elements and all <p> elements 
+------------------------------------------------------------------------------
+情境:點擊圖片區域會觸發function,跳訊息
+<map name="workmap">
+  <area shape="circle" coords="337,300,44" onclick="myFunction()">
+</map>
 
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+</script>
+------------------------------------------------------------------------------
+用圖片當背景呈現:  style="background-image: url('xxx.jpg')"
+<div style="background-image: url('img_girl.jpg');">
+------------------------------------------------------------------------------
+如果用很小的圖片當背景,因為尺寸小,所以會重複貼一堆小圖,想避免此問題, -> background-repeat:no-repeat;
+<style>
+body {
+  background-image: url('example_img_girl.jpg');
+  background-repeat: no-repeat;
+}
+</style>
+------------------------------------------------------------------------------
 
+background-size: fixed;  -> 圖片放大到一定程度,不管瀏覽器伸縮,圖片大小不變,縮小會被截到圖QQ
 
+background-size:cover ;  -> 不管瀏覽器伸縮,圖片會跟著放大縮小,無限制XD
+------------------------------------------------------------------------------
+<picture>              1. 如果屏幕或設備較小，則無需加載較大的圖像文件。 2.通過使用 <picture>元素，可以添加所有格式的圖像
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg">      ->始終將<img>元素指定為元素的最後一個子<picture>元素。該<img>元素由不支持該<picture>元素的瀏覽器使用，
+                                  或者如果沒有<source>匹配的標記，則使用該元素。
+</picture>
 
+------------------------------------------------------------------------------
+HTML 表格:
+*<tr> 每一行  
+*<th> 表頭
+*<td> table資料
+--------------------------------
+<table style="width:100%">   => 欄位之寬度比例
+<tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+------------------------------------------------------------------------------
+HTML表格-添加邊框:  border
 
+table, th, td {
+  border: 1px solid black;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------------------------------------------------------------------------
+HTML表格-塌陷的邊框:
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+------------------------------------------------------------------------------
+邊框與內文之間的距離;
+th, td {
+  padding: 15px;
+}
+------------------------------------------------------------------------------
+HTML表格-左對齊標題:
+th {
+  text-align: left;
+}
+------------------------------------------------------------------------------
+要使一個單元格跨越一列以上，請使用colspan屬性：
+ <th colspan="2">Telephone</th>
+------------------------------------------------------------------------------
+要使一個單元格跨度超過一行，請使用rowspan屬性：
+<th rowspan="2">Telephone:</th>
+------------------------------------------------------------------------------
+HTML表格-添加標題:
+<caption> Monthly savings /caption>
 
 
